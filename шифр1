@@ -1,0 +1,21 @@
+s=""
+s1=""
+answer = input("Choose action:1-code,2-decode,0-exit")
+if(answer==1):
+    line = raw_input("Input data")
+    key = int(input("Input key"))
+    for letter in line:
+        s+="".join(unichr(ord(letter)+key))
+        s1+=letter + "->" + s[-1] + "  "
+    print(s1)
+    print(s)
+elif(answer==2):
+    line = raw_input("Input data")
+    key = int(input("Input key"))
+    for letter in line:
+        s+="".join(unichr(ord(letter)-key))
+        s1+=letter + "->" + s[-1] + "  "
+    print(s1)
+    print(s)
+else :
+    exit
