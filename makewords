@@ -1,0 +1,10 @@
+def makewords(s):
+    k = []
+    for line in s:
+        words = line.split(' ')
+        for word in words:
+            word = word.lower()
+            word = word.strip(',.<>?/\'":;#№!~\n\t[]{}*+-_()1234567890=')
+            if word != '':
+                k.append(word)
+    return k
