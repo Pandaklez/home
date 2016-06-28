@@ -1,0 +1,17 @@
+i_text = str(input("Введите исходный текст: "))
+o_value = int(input("Введите значение сдвига: "))
+ 
+alfavit = list("йцукенгшщзхъфывапролджэячсмитьбюё")
+ 
+result = ""
+
+for s in i_text:
+    # Получаем новый символ из каждого старого
+    # % len(alfavit) нужно для того, чтобы никогда не выходить за рамки
+    # нашего алфавита
+    new_shifted_symbol = alfavit[(alfavit.index(s) + o_value) % len(alfavit)]
+ 
+    # Добавляем новый сивол в результирующую строку
+    result += new_shifted_symbol
+ 
+print(result)
