@@ -1,0 +1,8 @@
+import re
+import os
+
+def openfile(name):
+    f = open(name, 'r', encoding = 'UTF-8')
+    s = f.readlines()
+    f.close()
+    return s
